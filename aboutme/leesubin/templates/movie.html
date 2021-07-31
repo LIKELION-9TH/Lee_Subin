@@ -1,0 +1,149 @@
+{% extends "base.html"%}
+{% load static %}
+
+
+<!doctype html>
+<html lang="en">
+{% block content %}
+
+<head>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/album/">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        img {
+          max-width: 100%;
+          height: auto !important;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <header>
+
+    </header>
+
+    <main>
+
+        <section class="py-5 text-center container">
+            <div class="row py-lg-5">
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    <h1 class="fw-light">Movie</h1>
+                    <br>
+                    <p class="lead text-muted">여름에 보기 좋은 영화들 추천!</p>
+                    <p class="lead text-muted" style="font-size: small;">스릴러 러버..줄거리는 네이버 영화에서 가져왔습니다.(•⚗৺⚗•)</p>
+                    <p>
+                        <a href="{%url 'home' %}" class="btn btn-dark my-2">home</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <div class="album py-5 bg-light">
+          <div class="container">
+      
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img src="{% static '데이비드 게일.jpg' %}">
+                  <div class="card-body">
+                    <p class="card-text">데이비드 게일</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <small class="text-muted">6년간의 수감 생활 후 사형 집행일을 불과 5~6일 앞두고 게일은 자신의 변호사를 통해 인터뷰를 요청 하게 되며, 세인의 관심을 모았던 데이비드 게일의 살해 혐의에 대한 인터뷰는 빗시 블룸(케이트 윈슬렛 분)을 통해서만 할 의사를 밝힌다. 그가 살해범이라는 확신을 가지고 있던 빗시 블룸은 그와의 인터뷰를 진행하며 점점 더 그가 무죄이며 누군가의 음모로 누명을 쓴 것 이 아닐까 하는 의구심을 가지게 된다. 하지만 그의 무죄를 입증할 수 있는 시간은 이제 3일도 채 남지 않았다. 그는 데이비드 게일과 3일간의 인터뷰를 약속 받은 빗시 블룸은 데이비드 게일이 무죄임을 확신하고 남은 시간동안 그를 사형대로부터 구해 내기 위한 모든 노력을 시작하는데.</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img src="{% static '오큘러스.jpg' %}">
+                  <div class="card-body">
+                    <p class="card-text">오큘러스</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <small class="text-muted">어린 시절, 충격적인 사고로 부모님을 잃은 남매. 이 일로 동생이 소년원에 수감된다. 그로부터 10년 후, 동생이 출감하기를 기다린 누나는 어린 시절의 일이 부모님들이 새 집에 이사오면서 들여놓았던 거울의 짓이라 믿고 조사에 들어간다. 그 거울의 역대 주인들을 추적한 결과, 모두 비참한 죽음을 맞이했다는 사실을 알게 되고 그들이 모두 거울의 조종을 받은 희생자들이란 가설을 세우게 되는데..."</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img src="{% static '디파티드.jpg' %}">
+                  <div class="card-body">
+                    <p class="card-text">디파티드</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <small class="text-muted"> 남부 보스턴 매사츄세츠 주 경찰청은 프랭크 코스텔로(잭 니콜슨)가 이끄는 막강한 세력을 
+                        지닌 보스턴 최대 범죄조직망을 일망타진하기 위해 신참 경찰 빌리 코스티건(레오나르도 디카프리오)을 조직에 침투시킨다.
+                        빌리가 경찰 뱃지를 반납하고 보스턴 길거리를 떠돌다 코스텔로의 신임을 얻기 위해 애쓰는 동안 또 다른 신참 콜린 설리반(맷 데이먼)은 경찰청 내에서 승승장구하여 특별 수사반에 배치된다.
+                         특별 수사반의 임무 역시 코스텔러를 제거하는 것. 그러나 사실 콜린은 경찰청에 투입된 코스텔로의 첩자. 갱단과 경찰이 서로 상대방의 조직에 위장 침투한 것이다. 
+                         상대보다 한발 늦으면 자신이 죽는 상황, 두 남자는 서로의 운명에 비극의 총구를 겨눈다.</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img src="{% static '세븐.jpg' %}">
+                  <div class="card-body">
+                    <p class="card-text">세븐</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <small class="text-muted">은퇴를 7일 앞둔 관록의 형사 윌리엄 소머셋(모건 프리먼)과 새로 전근 온 신참내기 형사 밀스(브래드 피트)가 팀이 된 바로 다음날, 강압에 의해 위가 찢어질 때까지 먹다가 죽은 초고도 비만 남자와 역시 강압에 의해 식칼로 자기 살을 베어내 죽은 악덕 변호사의 사건과 마주한다. ‘식탐’, ‘탐욕’… 그리고 ‘나태’, ‘분노’, ‘교만’, ‘욕정’. ‘시기’ 윌리엄 소머셋은 현장에 남은 흔적들로 기나긴 연쇄 살인이 시작되었음을 직감하고 성서의 7가지 죄악을 따라 발생하는 사건들을 추적하기 시작하는데… 가장 치밀한 일곱 개의 연쇄살인이 시작된다!</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img src="{% static '레퀴엠.jpg' %}">
+                  <div class="card-body">
+                    <p class="card-text">레퀴엠</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <small class="text-muted">약을 사기 위해 엄마(사라)의 애장품 1호 TV를 동네 중고점에 끊임없이 팔아치우는 사라가 가장 사랑하는 아들 해리(자레드 레토 분)는 삶의 목표 없이 헤매이는 아름다운 여자친구 마리온(제니퍼 코넬리 분)과 달콤하고 행복한 미래를 꿈꾸며 외부의 현실과는 단절된 채 살아간다. 그러던 중 해리의 친구 타이론(말론 웨이언즈 분)과 함께 한탕 해 멋지게 살아보자고 결심한 이들은 마약 딜러로 나서 성공하지만 모두 헤로인 중독자가 된다.</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img src="{% static '셔터아일랜드.jpg' %}">
+                  <div class="card-body">
+                    <p class="card-text">셔터 아일랜드</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      
+                      <small class="text-muted">보스턴 셔터아일랜드의 정신병원에서 환자가 실종되는 사건이 발생한다. 연방보안관 테디 다니엘스(레오나르도 디카프리오)는 수사를 위해 동료 척(마크 러팔로)과 함께 셔터아일랜드로 향한다. 셔터 아일랜드에 위치한 이 병원은 중범죄를 저지른 정신병자를 격리하는 병동으로 탈출 자체가 불가능하다. 하지만 자식 셋을 죽인 혐의를 받고 있는 여인이 이상한 쪽지만을 남긴 채 감쪽같이 사라지고, 테디는 수사를 위해 의사, 간호사, 병원관계자 등을 심문하지만 모두 입이라도 맞춘 듯 꾸며낸 듯한 말들만 하고, 수사는 전혀 진척되지 않는다. 설상가상 폭풍이 불어 닥쳐 테디와 척은 섬에 고립되게 되고, 그들에게 점점 괴이한 일들이 일어나기 시작한다.</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+      
+              
+            </div>
+          </div>
+        </div>
+</body>
+{% endblock %}
+
+</html>

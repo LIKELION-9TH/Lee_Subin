@@ -1,0 +1,9 @@
+<h1>Edit!</h1>
+
+    <form action="{% url 'update' music.id %}" method="post">
+        {% csrf_token %}
+        <p>제목: <input type="text" name="title" value="{{music.title}}"></p>
+        <p>아티스트: <input type="text" name="writer" value="{{music.writer}}"></p>
+        가사: <textarea name="body" id="" cold="60" rows="30">{music.body}</textarea>
+        <button type="submit"> 수정 </button> 
+    </form>

@@ -1,0 +1,16 @@
+<h1>Add New</h1>
+<body>
+  <div class= "container">
+    <form action="{% url 'create' %}" method="POST">
+      {% csrf_token %}
+      <p>제목:<input type="text" name="title"></p>
+      <p>아티스트:<input type="text" name="writer"></p>
+      <p>가사: <textarea name="body" id=" cols="30" rows="10"></textarea>
+      <table>
+        {{form.as_table}}
+      </table>
+      <br>
+        <input class="btn btn-dark" type="submit" value="submit">
+    </form>
+  </div>  
+</body>

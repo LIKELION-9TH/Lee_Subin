@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail</title>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>{{music.title}}</h1>
+    <div>
+    작성자:{{music.writer}}
+    <br>
+    날짜:{{music.pub_date}}
+    </div>
+    <br>
+    <p>{{music.body}}</p>
+    <a href="{% url 'edit' music.id %}">수정하기</a>
+    <a href="{% url 'delete' music.id %}">삭제하기</a>
+</body>
+</html>
